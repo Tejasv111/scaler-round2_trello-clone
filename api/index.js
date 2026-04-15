@@ -4,7 +4,7 @@ import cors from "cors";
 import pool from "./db.js";
 
 const app = express();
-const PORT = Number(process.env.PORT || 4000);
+// const PORT = Number(process.env.PORT || 4000);
 
 app.use(cors());
 app.use(express.json());
