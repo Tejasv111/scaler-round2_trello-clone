@@ -283,7 +283,7 @@ app.put("/api/board", async (req, res) => {
 
     const memberIdMap = await ensureMembers(connection, board.members || []);
 
-    // Full snapshot sync to ensure board edit/delete/create persists correctly.
+
     await connection.query("DELETE FROM boards");
 
     for (const incomingBoard of board.boards) {
@@ -380,5 +380,7 @@ app.put("/api/board", async (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
+
 });
+export default app;
 
